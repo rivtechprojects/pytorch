@@ -58,7 +58,7 @@ add_executable(test_edge_op_registration
 
 target_compile_definitions(test_edge_op_registration PRIVATE USE_GTEST)
 
-target_link_libraries(test_edge_op_registration PRIVATE gtest gtest_main unbox_lib)
+target_link_libraries(test_edge_op_registration PRIVATE gtest_main unbox_lib)
 if((CMAKE_CXX_COMPILER_ID MATCHES "AppleClang") OR (APPLE AND CMAKE_CXX_COMPILER_ID MATCHES "Clang"))
   target_link_options(test_edge_op_registration PRIVATE
           "-Wl,-force_load,$<TARGET_FILE:unbox_lib>"
